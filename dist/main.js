@@ -1,0 +1,1 @@
+document.forms[0].onsubmit=async function(){try{let e=document.forms[0][0].value,t=document.getElementById("weather"),a="https://api.openweathermap.org/data/2.5/weather?q="+e+"&appid=249607106b0cfa8d5d5a26a0ef539b09";const o=await fetch(a),n=await o.json();console.log(n),t.innerText=n}catch(e){console.log(e)}};
