@@ -7,11 +7,18 @@
 </head>
 <body>
   <form action = "#" onsubmit="return getWeatherCity(this)">
-      <label for = "city">City</label>
-      <input name = "city" type="text" placeholder="Enter a city...">
+      <label for = "city"></label>
+      <input id = "city-input" name = "city" type="text" placeholder="Enter a city...">
       <input type="submit" value = "submit">
   </form>
-  <p id = "weather"></p>
+  <div id = "weather-info">
+    <p id = "temperature"></p>
+    <p id = "feels-like"></p>
+    <p id = "temp-high"></p>
+    <p id = "temp-low"></p>
+    <p id = "humidity"></p>
+  </div>
+  
 </body>
 <script src="main.js"></script>
 </html>
