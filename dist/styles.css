@@ -1,9 +1,9 @@
-form > *{
+#header > *{
     margin: 30px;
     
 }
 
-form{
+#header{
     display: flex;
     padding: 10em;
     justify-content: flex-end;
