@@ -2,14 +2,19 @@ import { showWeather } from "./weather.js";
 
 
 
-document.getElementsByTagName("button")[0].addEventListener("click", getWeatherCity);
+document.forms[0].addEventListener("submit", (e) =>{
+    e.preventDefault()
+  });
+
+document.getElementById("search-btn").addEventListener("click", getWeatherCity);
+
 let city = "atlanta";
-getDefaultWeatherCity();
+getDefaultWeatherCity(city)
 
 
 async function getWeatherCity() {
     try {
-        city = document.getElementById("city-input").value;
+        let city = document.getElementById("city-input").value;
         let key = "249607106b0cfa8d5d5a26a0ef539b09";
         let url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key;
         const response = await fetch(url);
@@ -22,9 +27,8 @@ async function getWeatherCity() {
     }
     
 }
-async function getDefaultWeatherCity() {
+async function getDefaultWeatherCity(city) {
     try {
-        
         let key = "249607106b0cfa8d5d5a26a0ef539b09";
         let url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key;
         const response = await fetch(url);

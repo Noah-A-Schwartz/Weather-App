@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Weather</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div id="header">
-    <label for="city"></label>
-    <input id="city-input" name="city" type="text" placeholder="Enter a city...">
-    <button type="button">Search</button>
-  </div>
+  <form novalidate>
+      <label for = "city"></label>
+      <input id = "city-input" name = "city" type="text" placeholder="Enter a city...">
+      <button id = "search-btn" type="submit" value = "submit">Search</button>
   </form>
-  <div id="weather-info">
-    <p id="city"></p>
-    <p id="temperature"></p>
-    <p id="feels-like"></p>
-    <p id="temp-high"></p>
-    <p id="temp-low"></p>
-    <p id="humidity"></p>
+  <div id = "weather-info">
+    <p id = "city"></p>
+    <p id = "temperature"></p>
+    <p id = "feels-like"></p>
+    <p id = "temp-high"></p>
+    <p id = "temp-low"></p>
+    <p id = "humidity"></p>
   </div>
-
+  
 </body>
 <script src="main.js"></script>
-
 </html>
